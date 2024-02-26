@@ -1,20 +1,20 @@
-package com.example.Othellodifficult.entity;
+package com.example.Othellodifficult.entity.message;
 
 import lombok.*;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "tbl_user")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @Builder
-public class UserEntity {
+@Table(name = "tbl_event_notification")
+public class EventNotificationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String password;
+    private Long userId;
+    private String eventType;
 }

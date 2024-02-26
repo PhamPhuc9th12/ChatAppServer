@@ -4,17 +4,17 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "tbl_user")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@Table(name ="tbl_group")
+@Entity
 @Builder
-public class UserEntity {
+public class GroupEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String username;
-    private String password;
+    private Long manager_group_id;
+    private String name;
 }
