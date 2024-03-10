@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
@@ -44,6 +45,8 @@ public class FriendsService {
 
     @Transactional
     public void acceptAddFriendRequest(Long senderId, String token) {
+
+        // ko tao bang chat ha?
         Long receiverId = TokenHelper.getUserIdFromToken(token);
         if (Boolean.FALSE.equals(friendRequestRepository.existsBySenderIdAndReceiverId(senderId, receiverId))) {
             throw new RuntimeException(Common.ACTION_FAIL);
