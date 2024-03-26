@@ -3,18 +3,22 @@ package com.example.Othellodifficult.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
+@Table(name ="tbl_comment_map")
 @Entity
 @Builder
-@Table(name = "tbl_user_chat")
-public class UserChatEntity {
+public class CommentMapEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long postId;
     private Long userId;
-    private Long groupId;
+    private String comment;
+    private LocalDateTime createdAt;
+    private Long commentId;
 }

@@ -18,6 +18,5 @@ public class FriendRequestEntity {
     private Long id;
     private Long senderId;
     private Long receiverId;
-
     private LocalDateTime createdAt;
 }
