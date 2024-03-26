@@ -15,8 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class TagService {
     private final TagRepository tagRepository;
     @Transactional(readOnly = true)
-    public Page<TagOutput> getAllTag(){
-        Pageable pageable = PageRequest.of(0,5);
+    public Page<TagOutput> getAllTag(Pageable pageable){
         Page<TagEntity> tagEntities = tagRepository.findAll(pageable);
         return tagEntities.map(
                 tagEntity -> {
