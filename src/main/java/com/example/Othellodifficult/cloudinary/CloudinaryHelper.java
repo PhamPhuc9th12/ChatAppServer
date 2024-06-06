@@ -22,7 +22,6 @@ public class CloudinaryHelper {
         cloudinary = new Cloudinary(
                 ObjectUtils.asMap(
                         Common.CLOUDINARY_NAME, Common.CLOUDINARY_NAME_VALUE3,
-
                         Common.CLOUDINARY_NAME, Common.CLOUDINARY_NAME_VALUE2,
 
                         Common.CLOUDINARY_API_KEY, Common.CLOUDINARY_API_KEY_VALUE,
