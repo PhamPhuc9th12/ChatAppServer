@@ -158,7 +158,7 @@ public class UserInteractService {
                     UserEntity user = userMap.get(likeMapEntity.getUserId());
                     return UserOutput.builder()
                             .id(user.getId())
-                            .fullName(user.getFullName())
+                            .fullName(user.getFullName())   
                             .imageUrl(user.getImageUrl())
                             .build();
                 }
